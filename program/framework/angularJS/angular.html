@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html ng-app>
+    <head>
+        <meta charset="utf-8">
+        <title> AngularJS</title>
+        <style>
+            body{
+                padding:10px;
+            }
+            .hi-light{
+                background-color:salmon;
+                padding:10px;
+                margin-bottom:20px;
+            }
+            .main-box{
+                color:white;
+                background-color:olive;
+                padding:10px;
+                margin-bottom:20px;
+            }
+            .test{
+               
+                border:2px dotted black;
+                padding:10px;
+                margin-bottom:20px;
+            }
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
+        
+    </head>
+    <body>
+        
+    <div class ="hi-light">
+    　 <h3>Bootstrapも入れたい</h3>
+    　 <p>そのままCDNをぶち込めばいいんじゃないの？</p>
+    </div>
+    
+    <div class="main-box">
+        <h3>Angular JS はどう入れる？</h3>
+        <p>html タグに「ng-app」を追加 <br> Angular JS のCDN　</p>
+    </div>
+
+    <div class="test">
+        <h3>Angular JS Test 1</h3>
+        <p><input type="text" ng-model="yourName"></p>
+        <p>Hello {{yourName}}!</p>
+       
+        <p>ng-model →　JSでいうIDをつけるみたいなもの？</p>
+        <p>「{{ 　}}」で出力先</p>
+    </div>
+    
+    <div class="test">
+        <h3>Angular JS Test 2</h3>
+        
+        <p>x: <input type="text" ng-model="x"></p>
+        <p>y: <input type="text" ng-model="y"></p>
+        
+        <p>入力値x:{{x}},入力値y:{{y}}</p>
+        <p>{{x}} vs {{y}}, {{( x > y ) ? x : y}} is big!</p>
+       
+        <p> 3 項演算子が使える！！</p>
+        
+    </div><div class="test">
+        <h3>Angular JS Test 3</h3>
+        
+        
+       <div ng-app="myApp">
+        <div ng-controller="myController as myCtrl">
+        {{myCtrl.message}}
+        </div>
+       </div>
+        
+    </div>
+    <script>
+         var app = angular.module('myApp', []);
+           app.controller('myController', function() {
+           this.message = 'Hello world!';
+           });
+    </script>
+    </body>
+</html>

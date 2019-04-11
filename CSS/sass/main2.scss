@@ -1,0 +1,23 @@
+$samples: sample1, sample2, sample3;
+
+@each $sample in $samples{
+    .#{$sample}-img { background: url(#{$sample}.png);
+        
+    }
+}
+
+
+$totalWidth: 940px;
+$columnCount: 5;
+
+@function getColumnWidth($width, $count) {
+    $padding: 10px;
+    $columnWidth: floor(($width - ($padding * ($count - 1))) / $count);
+    @debug $columnWidth;
+    @return $columnWidth;
+}
+
+.grid {
+    float: left;
+    width: getColumnWidth($totalWidth, $columnCount);
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>カウントダウンタイマー</title>
+   <style>
+      #timer{
+       width:500px;
+       padding:10px;
+       background:skyblue;
+       border-radius:15px;
+       text-shadow:2px 2px 3px #999;
+       box-shadow: 2px 2px 5px #999;
+        text-align:center;
+      }
+       #day,#hour,#min,#sec{
+           color:red;
+           font-size:32px;
+           font-weight:bold;
+           padding:0 10px;
+       }
+       
+       #clock_frame{
+          
+          width:250px;
+          height:110px;
+          margin-top:20px;
+          padding:20px;
+          border-radius:15px;
+          background:lightgray;
+          box-shadow: 2px 2px 5px #999;
+          
+     
+       }
+       #clock_time{
+        text-align:center;
+          font-size:40px;
+           font-weight:bold; 
+          padding:10px;
+         
+       }
+       #clock_date{
+          text-align:center;
+          font-size:14px;
+          font-weight:bold;
+           padding-bottom:10px;
+         
+       }
+       #inner{
+         
+           background:white;
+           border-radius:15px;
+           box-shadow: 2px 2px 5px #999;
+       }
+   </style>
+  </head>
+  <body>
+    <h1>カウントダウン</h1>
+    
+    <div id="timer">
+     <h2>2018年まであと</h2>
+     <p><span id="day"></span> 日 <span id="hour"></span>時間<span id="min"></span>分<span id="sec"></span>秒
+    ！！</p>  
+    </div>
+     <!-- 時計枠 -->
+    <div id="clock_frame">
+       <div id ="inner">
+        <!-- 時刻部分 -->
+        <div id="clock_time"></div>
+         <!-- 日付部分 -->
+        <div id="clock_date"></div>
+       </div>
+    </div>
+    
+    <script type="text/javascript" src="countdown.js"></script>
+  </body>
+</html>

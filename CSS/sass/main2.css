@@ -1,0 +1,18 @@
+.sample1-img {
+  background: url(sample1.png);
+}
+
+.sample2-img {
+  background: url(sample2.png);
+}
+
+.sample3-img {
+  background: url(sample3.png);
+}
+
+.grid {
+  float: left;
+  width: 180px;
+}
+
+/*# sourceMappingURL=main2.css.map */

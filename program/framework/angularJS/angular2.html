@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja" ng-app="myapp">
+<head>
+    <meta charset="UTF-8">
+    <title>Angularの練習</title>
+    <style>
+        .controller{
+            background:pink;
+            padding:15px;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="angular2.js"></script>
+</head>
+<body>
+    <h1>AngularJSの練習</h1>
+    
+     <div class="controller" ng-controller="MainController">
+        <p> --- コントローラー内 : MainController ---</p>
+        
+        <p>{{users.length}} users.</p>
+         <p> --- コントローラー内 : UserItemController ---</p>
+        <ul>
+            <li ng-repeat="user in users" ng-controller="UserItemController">
+              ID {{$index+1}} → {{user.name|uppercase}} : {{user.score}}
+                <button ng-click="increment()">+1</button>
+                <button ng-click="decrement()">-1</button>
+            </li>
+        </ul>
+         <p> ---  UserItemController  end---</p>
+         <p>{{today|date:'yyyy-MM-dd'}}</p>
+         <p>「ng-repeat」 でコントローラーの配列をループ処理</p>
+         <p>”引数”の昇順 → |orderBy:"引数" , 降順 →　 |orderBy:"-引数"</p>
+         <hr>
+         
+         <form novalidate name="myForm" ng-submit="addUser()">
+         <p> Name:<input type="text" name="name" ng-model="user.name" required ng-minlength="5" ng-maxlength="8">
+          (5~8 letters : required)
+          </p>
+          <span ng-show="myForm.name.$error.required">Required!</span>
+          <span ng-show="myForm.name.$error.minlength">Too short!</span>
+          <span ng-show="myForm.name.$error.maxlength">Too long!</span>
+          
+           <p><input type="submit" value="add"></p>
+           
+            <p>Memo:
+    <textarea ng-model="user.memo" ng-maxlength="140"></textarea>{{140-user.memo.length}}
+    </p>
+         </form>
+         <pre>{{user|json}}</pre>
+     </div>
+     
+          
+          
+</body>
+</html>

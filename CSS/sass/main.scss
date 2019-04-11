@@ -1,0 +1,35 @@
+$baseFontSize:16px;
+$baseColor:olive;
+
+ #main { 
+    background-color: lighten($baseColor,10%);
+     
+     p {font-size: $baseFontSize;
+     }
+     a {opacity:0.6;
+       &:hover{opacity:1.0;
+       }
+     
+     
+     }
+     
+ }
+ 
+.text {
+    font: {
+        family: source-sans-pro, sans-serif;
+        size: $baseFontSize*2;
+        weight: normal;
+    }
+}
+
+@for $i from 10 through 14 {
+    .fs#{$i} { font-size: #{$i}px; }
+}
+
+$i: 10;
+@while $i <= 14 {
+    .fs#{$i} { font-size: #{$i}px; }
+    $i: $i + 1;
+}
+

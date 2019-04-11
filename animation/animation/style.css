@@ -1,0 +1,47 @@
+.letter {
+    display:block;
+    padding: 0 30px;
+    text-decoration: none;
+    text-align: center;
+    position:relative;
+    font-size: 40px;
+    transform: rotate(-20deg);
+    transition: all 0.3s ease-in-out;
+    color: #000;
+}
+
+
+.letter {
+    display:block;
+    width: 300px;
+    padding: 0 30px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 40px;
+    transition: all 0.5s ease-in-out;
+    color: #000;
+    position:relative;
+}
+
+.letter:hover{
+ color: red;
+ transition:  0.5s ease-in-out;
+}
+
+.letter::before {
+ position:absolute;
+ background: red;
+ content:"";
+ height: 5px;
+ width: 5px;
+ transition:  0.5s ease-in-out;
+}
+
+.letter::after {
+ position:absolute;
+ background: green;
+ content:"";
+ height: 5px;
+ width: 5px;
+ transition:  0.5s ease-in-out;
+}

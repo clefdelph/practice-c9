@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hello World</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+
+
+    <div id="vue-container">
+        
+        <h2>My todo <small>({{remaining}}/{{todos.length}})</small></h2>
+        
+        <form>
+            <input type="text" v-model="newtodo" placeholder="ここにタスクを入力">
+            <button v-on:click="addTodo">追加</button>
+        </form>
+
+        <ul>
+            <li v-for="todo in todos">
+                <label v-bind:class="{ done: todo.done }">
+                <input type="checkbox" v-model="todo.done"> {{todo.task}}
+                <button v-on:click="deleteTodo(todo)">削除</button>
+                </label>
+            </li>
+        </ul>
+
+        <button v-on:click="purge">チェックしたタスクを一括削除</button>
+
+    </div>
+    <script src="https://unpkg.com/vue"></script>
+    <script type="text/javascript" src="main.js"></script>
+</body>
+
+</html>

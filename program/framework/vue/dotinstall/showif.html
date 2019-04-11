@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Vue Test</title>
+  <style>
+      .ex-box1
+      { border: 2px dotted red;}
+      .ex-box2
+      { border: 2px dotted green;}
+  </style>
+</head>
+<body>
+  <h1>Vue の練習</h1>
+  <hr>
+<div id="myapp">
+    <div class="ex-box1">    
+      v-show タグ → false で display:none を追加
+        <div v-show="showContent">
+            {{content}}
+        </div>
+    </div>
+    
+    <div class="ex-box2">
+       v-if タグ →　falseで要素ごと非表示にする
+        <div v-if="showContent">
+            {{content}}
+        </div>
+    </div>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script>
+        // v-show
+        // v-if
+        var vm = new Vue({
+            el: '#myapp',
+            data: {
+                content: 'hello world',
+                showContent: false
+            }
+        });
+    </script>
+</body>
+</html>

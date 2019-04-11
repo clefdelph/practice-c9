@@ -1,0 +1,44 @@
+body {
+    font-family: sans-serif;
+    font-size: 21px;
+    padding: 20px;
+    background: #073B4C;
+}
+
+.cool-link {
+    margin-right: 5px;
+    display: inline-block;
+}
+
+.cool-link a {
+    text-decoration: none;
+    position: relative;
+    transition: 0.25s ease-in-out;
+    color: #FFF;
+}
+
+.cool-link:hover a {
+    color: #FFD166;
+}
+
+.cool-link a :before {
+    width: 0;
+    position: absolute;
+    height: 3px;
+    background: #FFD166;
+    bottom: -5px;
+    content: "";
+}
+
+.cool-link.left-to-right:hover a :before .cool-link .right-to-left:hover a ::before .cool-link .center-to-side:hover a ::before {
+    width: 100%;
+}
+
+.cool-link.right-to-left:hover a :before {
+    right: 0;
+}
+
+.cool-link .center-to-side:hover a :before {
+    left: 50%;
+    transform: translateX(-50%);
+}

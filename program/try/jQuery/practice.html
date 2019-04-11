@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style type="text/css">
+        .color {
+            color: #ff0000;
+        }
+    </style>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <p class="test">colorクラスを付けるよ</p>
+    <div id="message">属性</div>
+    <button>クラスの操作</button>
+    
+    
+    <script>
+        $(function() {
+            //classの値を取得
+            var value = $('p').attr('class')
+            $('button').on('click',(function() {
+                if ($('.test').hasClass('color')) {
+                    $('.test').removeClass('color');
+                    $('.test').text('クラスを削除して黒字になったよ');
+                    
+                }
+                else {
+                    $('.test').addClass('color');
+                    $('.test').text('クラスを追加して赤字になったよ');
+                    
+                }
+                console.log($('.test').hasClass('color'));
+            }));
+        });
+    </script>
+</body>
+
+</html>

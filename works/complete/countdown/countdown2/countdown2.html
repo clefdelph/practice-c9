@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html lang="ja-JP">
+<head>
+   <meta charset="UTF-8">
+   <title>簡易ポモドーロタイマー</title>
+ 
+   
+   <style type="text/css">
+        #container{width: 250px; margin: 30px auto; border: 1px solid #CCC; text-align: center; padding: 10px;}
+        #current_time{font-size: 36px; }
+        input[type="button"]{ width: 80px;}
+    </style>
+</head>
+<body>
+    <div id="container">
+      <div id="timer">00:00</div>
+  <div class="controls">
+    <button id="min10">10min</button>
+    <button id="reset">Reset</button>
+    <button id="start">Start</button>
+    <p id ="msg">push start</p>
+  </div>
+  </div>
+  <script type="text/javascript">
+  var timer =document.getElementById('timer');
+  var min10 = document.getElementById('min10');
+  var start = document.getElementById('start');
+  var msg = document.getElementById('msg');
+  var count ;
+  var min , sec;
+  
+  min10.onclick=function(){
+    
+    count = 600;
+    min = ("0"+Math.floor(count/60)).slice(-2);
+    sec = ("0"+count%60).slice(-2);
+    
+    timer.innerHTML = min+":"+sec ;  
+    
+    
+    console.log(min+"分",sec+"秒");
+  };
+  
+  start.onclick =function(){
+   msg.textContent = 'countdown started!';      
+   console.log('countdown started!');
+  };
+   </script>
+</body>
+</html>

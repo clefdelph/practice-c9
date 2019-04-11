@@ -1,0 +1,39 @@
+# block style
+# - のみ
+# - delph
+# - clef
+# - cle
+# - quarter
+# - quaver
+
+# mapping いわゆる連想配列
+
+# name: clef
+# color: blue
+
+# name: cle
+# color: green
+
+# names: [clef,cle,quarter,quaver]
+# colors: [blue,green,orange,purple]
+ 
+ 
+---
+ firstdragon: &firstdragon
+  feature: [wing,tailball]
+ clef:
+  color: blue
+  <<: *firstdragon
+ cle:
+  color: green  
+  <<: *firstdragon
+---
+ seconddragon: &seconddragon
+  feature: [forehead,breast]
+ quarter:
+  color: orange
+  <<: *seconddragon
+ quaver:
+  color: purple
+  <<: *seconddragon
+...

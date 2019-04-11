@@ -1,0 +1,59 @@
+<!-- index.html -->
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+        <meta charset="utf-8">
+        <title>To Do List</title>
+
+        <!-- ライブラリの読み込み -->
+        <link rel="stylesheet" href="styles.css"/>
+        <link rel="stylesheet" href="https://get.mavo.io/mavo.css"/>
+        <link href="https://fonts.googleapis.com/css?family=Fugaz+One" rel="stylesheet">
+        <script src="https://get.mavo.io/mavo.min.js"></script>   
+  </head>
+  <body>
+ 　　 <div style="background-color: [color];"  mv-app="myapp" mv-mode="edit" 　mv-storage="local">
+      
+      <header>    
+    　
+    　 <h1>Memo <span class="subtitle">メモアプリ</span></h1>
+    　
+    　</header> 
+     
+    　
+    　<div id="container">
+      <main>
+       
+       <div class ="task-container">
+           <h2>メモ一覧</h2>
+       <ul>
+          <li property="task" mv-multiple>
+            <input property="check" type="checkbox" />
+            <span property="title">ここにメモ内容を入力</span>
+          </li>
+        </ul>
+      </div>  
+      
+    
+         <div class="color-picker">
+          <div class="color-content">    
+      <h3>背景色</h3>
+       <div class="HSL">
+        <div>H(色相) <input type="range" property="hue" max="360" /></div>
+	    <div>S(彩度) <input type="range" property="saturation" /></div>
+	    <div>L(明度) <input type="range" property="lightness" /></div>
+    </div>
+	<input property="color" readonly
+	       value="hsl([hue], [saturation]%, [lightness]%)" />
+	<p>スライダーを動かすと<br>背景色を変えることができます</p>
+	</div>
+         </div>  
+      </main>    
+      </div>
+  </div>
+ 
+  </div>
+  </body>
+</html>

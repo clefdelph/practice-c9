@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Vue Test</title>
+</head>
+<body>
+  <h1>Vue の練習</h1>
+  <hr>
+  
+  <div id="mycounter">
+        <div v-text="count"></div>
+        <div v-text="count+'回ボタンを押しました'"></div>
+    
+        <button v-on:click="countUp">Up</button>
+  </div>
+ 
+ 
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <script>
+  var vm = new Vue({
+            el: '#mycounter',
+            data: {
+                count: 0
+            },
+            methods: {
+                countUp: function() {
+                    this.count++;
+                }
+            }
+        });
+  </script>
+</body>
+</html>

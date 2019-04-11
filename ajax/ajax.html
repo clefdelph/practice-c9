@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>jQueryの練習</title>
+</head>
+<body>
+    <p>jQueryの練習</p>
+
+    <button>もっと読む</button>
+    <div id="result"></div>
+  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script>
+        $(function() {
+
+            // Ajax
+            // Asynchronous JavaScript + XML
+            // サーバーと通信 + ページの書き換え
+            // 非同期: 処理が終わる前に次の処理に移る
+
+            $('button').click(function() {
+                $('#result').load('ajax2.html', function() {
+               alert( "Load was performed." );
+                });
+                // $('#message').css('color', 'red');
+            });
+
+        });
+    </script>
+</body>
+</html>

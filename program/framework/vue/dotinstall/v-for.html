@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Vue Test</title>
+  <style>
+      .ex-box1
+      { border: 2px dotted red;}
+      .ex-box2
+      { border: 2px dotted green;}
+  </style>
+</head>
+<body>
+  <h1>Vue の練習</h1>
+  <hr>
+<body>
+    
+        
+    <div id="app">
+        v-for で配列を出力( 変数名 in 配列名 {{変数名}})
+        <ul>
+            <li v-for="member in family">{{member}}</li>
+        </ul>
+        
+        連想配列 (val, key) {{ key }} {{ val }} <br>
+        <strong>key value の位置に注意する!!</strong>
+        <ul>
+            <li v-for="(species, name) in family2"> {{name}} : {{species}}</li>
+        </ul>
+    </div>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script>
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                family: ['delph', 'clef', 'cle', 'quarter', 'quaver'],
+                family2:{'delph':'human','clef':'dragon'}
+            }
+        });
+    </script>
+</body>
+</html>

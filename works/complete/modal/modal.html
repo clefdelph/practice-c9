@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>modal window</title>
+  <link rel="stylesheet" href="css/styles.css" media="all">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+</head>
+
+<body>
+  <!--モーダルウィンドウのボタンを作る -->
+ <h1>モーダルウィンドウの練習</h1>
+<p class ="modal-text">
+  モーダルウィンドウは、表示中に他のウィンドウの操作を受け付けません
+</p>
+  <div class="button">
+    <div class="btn modal-open ">
+      モーダルウィンドウを開く<i class="fa fa-sign-in" aria-hidden="true"></i>
+    </div>
+ </div>  
+  <div class="hover">クリックするとモーダルウィンドウが開きます</div>
+  
+  <div class="modal-back"></div>
+<!--ボタンがhover したとき色が変わる -->
+  <!--モーダルウィンドウ コンテナ 1-S -->
+    <!--モーダルウィンドウの中身  S-->
+   <div class="modal-container">
+     <div class="icon-close close-modal">
+       <i class="fa fa-times" aria-hidden="true"></i>
+     </div>
+     <p>
+      <h3>モーダルウィンドウが開きました。</h3>
+     </p>
+    <!--モーダルウィンドウ閉じるボタン-->
+     <div class="btn close-modal">
+     閉じる
+     </div>
+    
+    <!--モーダルウィンドウの中身E -->
+<script src="js/modal.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<!-- index.html -->
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+        <meta charset="utf-8">
+        <title>To Do List</title>
+
+        <!-- ライブラリの読み込み -->
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <link rel="stylesheet" href="styles.css"/>
+        <link rel="stylesheet" href="https://get.mavo.io/mavo.css"/>
+        <link href="https://fonts.googleapis.com/css?family=Fugaz+One" rel="stylesheet">
+        <script src="https://get.mavo.io/mavo.min.js"></script>   
+  </head>
+  <body>
+       
+  <div style="background-color: [color];"  mv-app="myapp" mv-mode="edit" mv-bar="hide">
+      <header>    
+    　 <h1>To Do List <span class="subtitle">テスト用タスク管理アプリ</span></h1>
+    　</header>
+    　
+    <div id="container">
+      <main>
+    　　  <h2>注意 <span class="subtitle">これはテスト用です。<br>
+     　    再読み込みをすると元に戻ります。<br>予めご了承ください 。
+     　    </span></h2>
+        <hr>
+      　   <div class ="count-container">
+           <div class ="count-task">   
+     　      <p><i class="fa fa-check-square-o" aria-hidden="true"></i>完了タスク: [count(check)]</p>
+            <p><i class="fa fa-square-o" aria-hidden="true"></i>残りタスク: [count(task) - count(check)]</p>
+           </div>
+          </div>
+        <hr>
+        　<div class ="task-container">
+           <h2><i class="fa fa-list-ul" aria-hidden="true"></i>タスク一覧</h2>
+            <ul>
+              <li property="task" mv-multiple>
+              <input property="check" type="checkbox" />
+              <span property="title">ここにタスクを入力</span>
+              </li>
+            </ul>
+           </div>  
+      
+    
+        <div class="color-picker">
+          <div class="color-content">    
+           <h3>背景色</h3>
+           <div class="HSL">
+            <div>H(色相) <input type="range" property="hue" max="360" /></div>
+	        <div>S(彩度) <input type="range" property="saturation" /></div>
+	        <div>L(明度) <input type="range" property="lightness" /></div>
+           </div>
+	       <input property="color" readonly
+	       value="hsl([hue], [saturation]%, [lightness]%)" />
+	       <p>スライダーを動かすと<br>背景色を変えることができます</p>
+	       </div>
+         </div>  
+      </main>   
+      
+    </div>
+      
+  </div>
+ 
+  </div>
+  </body>
+</html>
